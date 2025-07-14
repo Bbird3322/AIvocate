@@ -1,2 +1,2 @@
 # AIvocate
-AI使った
+AI使った裁判ごっこ
