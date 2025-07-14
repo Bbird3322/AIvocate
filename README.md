@@ -1,0 +1,2 @@
+# AIvocate
+AI使った
