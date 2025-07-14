@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIvocate - 裁判推理ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
+      height: 90vh;
+    }
+    #evidence-panel, #chat-panel {
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    #evidence-panel {
+      width: 30%;
+      background: #fff;
+      border-right: 1px solid #ccc;
+    }
+    #chat-panel {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+    #chat-log {
+      flex: 1;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    #input-area {
+      display: flex;
+      margin-top: 1rem;
+    }
+    #player-input {
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    #send-btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+    #status-bar {
+      background: #eee;
+      padding: 0.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    AIvocate：弁護AIシミュレーター
+  </header>
+  <main>
+    <div id="evidence-panel">
+      <h3>証拠一覧</h3>
+      <ul id="evidence-list">
+        <!-- JSで動的に追加 -->
+      </ul>
+    </div>
+    <div id="chat-panel">
+      <div id="chat-log">
+        <!-- 会話ログがここに表示される -->
+      </div>
+      <div id="input-area">
+        <input type="text" id="player-input" placeholder="証人を尋問、証拠を提示など...">
+        <button id="send-btn">送信</button>
+      </div>
+    </div>
+  </main>
+  <div id="status-bar">
+    目標：控訴審で執行猶予を勝ち取れ
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
